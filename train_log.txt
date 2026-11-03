@@ -1,0 +1,34 @@
+train (6941, 47), test (2975, 47), positives 332 (4.8%)
+
+== Nested CV (unbiased estimate of tuning + model) ==
+  outer fold  1: logreg 0.9744  extra_trees 0.9713  lightgbm 0.9711  ensemble 0.9743
+  outer fold  2: logreg 0.9827  extra_trees 0.9812  lightgbm 0.9806  ensemble 0.9815
+  outer fold  3: logreg 0.9723  extra_trees 0.9682  lightgbm 0.9672  ensemble 0.9691
+  outer fold  4: logreg 0.9909  extra_trees 0.9881  lightgbm 0.9916  ensemble 0.9905
+  outer fold  5: logreg 0.9702  extra_trees 0.9676  lightgbm 0.9690  ensemble 0.9703
+  outer fold  6: logreg 0.9793  extra_trees 0.9809  lightgbm 0.9783  ensemble 0.9797
+  outer fold  7: logreg 0.9718  extra_trees 0.9669  lightgbm 0.9706  ensemble 0.9724
+  outer fold  8: logreg 0.9781  extra_trees 0.9806  lightgbm 0.9782  ensemble 0.9792
+  outer fold  9: logreg 0.9893  extra_trees 0.9875  lightgbm 0.9859  ensemble 0.9889
+  outer fold 10: logreg 0.9774  extra_trees 0.9721  lightgbm 0.9586  ensemble 0.9707
+  outer fold 11: logreg 0.9800  extra_trees 0.9750  lightgbm 0.9735  ensemble 0.9773
+  outer fold 12: logreg 0.9815  extra_trees 0.9816  lightgbm 0.9777  ensemble 0.9813
+  outer fold 13: logreg 0.9798  extra_trees 0.9804  lightgbm 0.9801  ensemble 0.9825
+  outer fold 14: logreg 0.9891  extra_trees 0.9889  lightgbm 0.9890  ensemble 0.9901
+  outer fold 15: logreg 0.9617  extra_trees 0.9653  lightgbm 0.9601  ensemble 0.9627
+logreg       0.9786 ± 0.0076 | train 0.9820 gap +0.0035
+extra_trees  0.9770 ± 0.0078 | train 0.9921 gap +0.0151
+lightgbm     0.9754 ± 0.0093 | train 0.9865 gap +0.0111
+ensemble     0.9780 ± 0.0079
+
+== Tune on full training set, fit, predict test ==
+logreg       best {'C': 0.03}  CV 0.9781
+extra_trees  best {'min_samples_leaf': 10, 'max_features': 'sqrt'}  CV 0.9781
+lightgbm     best {'n_estimators': 200, 'num_leaves': 7, 'min_child_samples': 50}  CV 0.9775
+
+wrote submission.csv (2975, 2)
+correlation between model test predictions (Spearman):
+             logreg  extra_trees  lightgbm
+logreg        1.000        0.860     0.903
+extra_trees   0.860        1.000     0.841
+lightgbm      0.903        0.841     1.000

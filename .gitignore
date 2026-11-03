@@ -1,0 +1,11 @@
+# Competition data is not redistributed; put it in for_students/ locally
+for_students/
+
+# Course material and the Word version of the writeup (writeup.md is the submitted version)
+*.pptx
+*.docx
+~$*
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -1,0 +1,19 @@
+X (6941, 65), positives 332
+
+[logreg] all features: 0.9776
+[logreg]  drop donation               ( 8 cols): 0.9739  delta -0.0036
+[logreg]  drop geo/zip                ( 9 cols): 0.9735  delta -0.0041
+[logreg]  drop tickets                ( 9 cols): 0.9738  delta -0.0037
+[logreg]  drop sub location dummies   ( 9 cols): 0.9779  delta +0.0003
+[logreg]  drop sub 2013 detail        ( 7 cols): 0.9779  delta +0.0004
+[logreg]  drop account misc           ( 2 cols): 0.9758  delta -0.0018
+[logreg]  + ID prefix feature: 0.9776  delta +0.0000
+
+[lgbm] all features: 0.9767
+[lgbm]  drop donation               ( 8 cols): 0.9716  delta -0.0051
+[lgbm]  drop geo/zip                ( 9 cols): 0.9761  delta -0.0006
+[lgbm]  drop tickets                ( 9 cols): 0.9719  delta -0.0048
+[lgbm]  drop sub location dummies   ( 9 cols): 0.9766  delta -0.0001
+[lgbm]  drop sub 2013 detail        ( 7 cols): 0.9767  delta +0.0000
+[lgbm]  drop account misc           ( 2 cols): 0.9763  delta -0.0004
+[lgbm]  + ID prefix feature: 0.9766  delta -0.0001

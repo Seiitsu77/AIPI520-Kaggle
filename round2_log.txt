@@ -1,0 +1,18 @@
+
+===== CV folds seed 42 (5-fold x 5 repeats) =====
+current logreg (C=0.03)           CV 0.9784  train 0.9821
+A  recency coding                  (C=0.1) CV 0.9790  train 0.9842  paired diff +0.0007 ± 0.0005  better in 60%  fail
+B  segment interactions            (C=0.1) CV 0.9781  train 0.9834  paired diff -0.0002 ± 0.0005  better in 52%  fail
+C  A + B                           (C=0.1) CV 0.9796  train 0.9844  paired diff +0.0013 ± 0.0005  better in 84%  fail
+D  splines (A features)            (C=0.01) CV 0.9780  train 0.9844  paired diff -0.0003 ± 0.0011  better in 48%  fail
+E  segmented models (A features)   (C=0.1) CV 0.9789  train 0.9851  paired diff +0.0005 ± 0.0008  better in 72%  fail
+
+===== CV folds seed 7 (5-fold x 5 repeats) =====
+current logreg (C=0.1)           CV 0.9794  train 0.9834
+A  recency coding                  (C=0.1) CV 0.9801  train 0.9841  paired diff +0.0007 ± 0.0001  better in 92%  fail
+B  segment interactions            (C=0.1) CV 0.9787  train 0.9834  paired diff -0.0006 ± 0.0003  better in 32%  fail
+C  A + B                           (C=0.1) CV 0.9803  train 0.9844  paired diff +0.0010 ± 0.0002  better in 80%  fail
+D  splines (A features)            (C=0.01) CV 0.9789  train 0.9843  paired diff -0.0005 ± 0.0006  better in 36%  fail
+E  segmented models (A features)   (C=0.1) CV 0.9798  train 0.9849  paired diff +0.0004 ± 0.0006  better in 60%  fail
+
+Accepted (passes on both fold sets): none
