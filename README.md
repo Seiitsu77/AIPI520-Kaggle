@@ -23,6 +23,7 @@ The final submission is a regularized logistic regression (C = 0.03) on 47 hand-
 | `ablation.py` | Feature-group ablation (drop one group at a time) → `ablation_log.txt` |
 | `train.py` | Small fixed hyperparameter grids, nested CV, final fit and submission files → `train_log.txt` |
 | `experiments_round2.py` | Second-round ideas judged by a pre-set paired-CV acceptance rule (none accepted) → `round2_log.txt` |
+| `leaderboard_noise.py` | How much AUROC varies when only about half of the test set is scored (public leaderboard) → `leaderboard_noise_log.txt` |
 | `history_model.py` | Explored "back-test" renewal model built from past seasons; it gave no CV gain and is not used in the final model |
 | `submission_logreg.csv` | Final submission (logistic regression) |
 | `submission.csv` | Rank-average ensemble submission (not chosen) |
@@ -45,6 +46,7 @@ python eda.py
 python ablation.py
 python train.py               # nested CV + submissions; add --no-nested to skip the slow nested CV
 python experiments_round2.py
+python leaderboard_noise.py
 ```
 
 Tested with Python 3.13. All CV splits use fixed random seeds.
